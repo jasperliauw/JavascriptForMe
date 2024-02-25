@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+        const app = document.getElementById("app")
+        
+        function Header(props){  //Must be capitalized
+            return(
+                <div>
+                    <h1>Develop Preview Ship!</h1>
+
+                </div>
+            )
+        }
+
+        function HomePage(){
+            return(
+                <div>
+                
+                    <Header title="React "/> //Nesting a thing
+                </div>
+            )
+        }
+        
+        const root = ReactDOM.createRoot(app)
+        root.render(<HomePage />) //must have <something />
+    </script>
+    
+    
+    <!-- 
+        const vehicleOne = {
+        brand: 'Ford',
+        model: 'Mustang',
+        type: 'car',
+        year: 2021, 
+        color: 'red'
+        }
+
+        myVehicle(vehicleOne);
+
+        function myVehicle({type, color, brand, model}) {
+        const message = 'My ' + type + ' is a ' + color + ' ' + brand + ' ' + model + '.';
+}
+        This is with destructing     
+
+
+-->
+    
+    <!-- <script type="text/javascript">
+        const app = document.getElementById("app")
+        const header = document.createElement('h1')
+        const text = "Hello World!"
+        const headerContent = document.createTextNode(text)
+        header.appendChild(headerContent)
+        app.appendChild(header)
+    </script> -->
+
+</body>
+</html>
