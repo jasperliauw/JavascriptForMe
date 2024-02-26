@@ -13,20 +13,30 @@
     <script type="text/jsx">
         const app = document.getElementById("app")
         
-        function Header(props){  //Must be capitalized
+        function Header({title}){  //Must be capitalized
+            console.log(title)
             return(
                 <div>
-                    <h1>Develop Preview Ship!</h1>
+                    <h1>{`Cool ${title}`}</h1> {/* <— We use curly braces to enter Javascript land */}
 
                 </div>
             )
         }
 
         function HomePage(){
+            const fruits = ["Apple", "Oranges", "Grapes"]
+            
             return(
                 <div>
                 
-                    <Header title="React "/> //Nesting a thing
+                    <Header title="React "/> 
+                    <Header title="reusing a component" />
+
+                    <ul>
+                        {fruits.map((fr) => (
+                            <li key={fr}>{fr}</li>
+                        ))}
+                    </ul>
                 </div>
             )
         }
